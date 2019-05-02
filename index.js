@@ -1,7 +1,8 @@
 var arr= new Array();
 var elemento;
-(async function load() {
 
+
+(async function load() {
 async function getdatos(url){
   const responde = await fetch(url);
   const data = await responde.json();
@@ -29,15 +30,12 @@ const $modalImage = $modal.querySelector('img')
 const $modalDescription = $modal.querySelector('p')
 
 function clickealo($element){
-  console.log($element);
+  // console.log($element);
   $element.addEventListener('click', ()=>{
     showModal($element)
   })
 }
 const randomUsername = await getdatos('https://randomuser.me/api/?results=9');
-
-console.log(randomUsername);
-
 
 function createTemplate (HTMLString){
   const html = document.implementation.createHTMLDocument();
@@ -45,9 +43,11 @@ function createTemplate (HTMLString){
   return html.body.children[0];
 }
 
+
+
 function item(i){
     const user = randomUsername.results[i];
-    console.log(user)
+    // console.log(user)
 }
 
 randomUsername.results.forEach((result, items)=>{// objeto, indice
@@ -63,8 +63,7 @@ function showModal($element){
   $modal.style.animation = 'modalIn .8s forwards';
 
   const id = parseInt($element.id);
-  console.log(arr[id])
-
+  // console.log(arr[id])
    $modalImage.setAttribute('src', arr[id].picture.large);
    $modalTitle.textContent = `Nombre: ${arr[id].name.first} ${arr[id].name.last}`;
    $modalDescription.textContent = `Email: ${arr[id].email}`;
