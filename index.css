@@ -1,0 +1,32 @@
+body{
+  background-color:  #A16DC9  ;
+  margin: 0px;
+}
+h1{
+  text-align: center;
+  color: #FF96A0;
+
+}
+
+.container{
+  text-align: center;
+  width: 63%;
+  margin-left:20%;
+  overflow-x: hidden;
+  background: gray;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 200px);
+
+}
+.box{
+  text-transform: uppercase;
+  text-align: center;
+  overflow: auto;
+  background: lightgray;
+  margin: 5px;
+  padding: 5px;
+}
+img{
+  padding-left: 20px;
+}
